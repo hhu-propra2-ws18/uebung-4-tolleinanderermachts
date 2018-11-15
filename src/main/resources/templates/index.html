@@ -32,6 +32,25 @@
             </ul>
         </td>
     </tr>
+    <tr th:each="kunde : ${kunden}">
+  		<td th:text="${kunde.getName()}"></td>
+
+
+			<td th:text="${kunde.getStadt()}"></td>
+      <td th:text="${kunde.getPlz()}"></td>
+
+
+
+  		<td>
+        <ul>
+          <li th:each="auto : ${kunde.getAutos()}">
+            <span th:text="${auto.getMarke()}"></span>
+            <span th:text="${auto.getFarbe()}"></span>
+            <span th:text="${auto.getHubraum()}"></span>
+          </li>
+        </ul>
+  		</td>
+  	</tr>
     </tbody>
 </table>
 </body>

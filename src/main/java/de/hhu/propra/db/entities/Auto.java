@@ -1,23 +1,24 @@
 package de.hhu.propra.db.entities;
-
-
 import lombok.Data;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import java.util.*;
 
 @Data
 @Entity
 public class Auto{
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Long id;
 
-    @Id
-    @GeneratedValue
-    private int ID;
+  private String marke;
 
-    private String marke;
+  private String farbe;
 
-    private String farbe;
+  private int hubraum;
 
-    private int hubraum; // in ccm
+  
 }
