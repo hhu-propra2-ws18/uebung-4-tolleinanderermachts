@@ -1,5 +1,6 @@
 package de.hhu.propra.db;
 
+import de.hhu.propra.db.data.AutoRepository;
 import de.hhu.propra.db.data.KundeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class KundeController{
     @Autowired
     KundeRepository kunden;
+    AutoRepository auto;
 
     @GetMapping("/")
     public String index(Model model) {
