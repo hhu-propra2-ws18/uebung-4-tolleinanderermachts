@@ -20,5 +20,4 @@ public class Kunde {
     @JoinColumn
     private List<Auto> autos;
 
-    // TODO: Hier muss irgendetwas mit Autos hin...
 }
